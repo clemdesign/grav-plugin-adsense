@@ -22,11 +22,11 @@ For modular page, plugin allow user to define default `horizontal`, `vertical` o
 
 For page content, plugin allow user to define a list of Adsense blocs and integrate it through [Shortcode](https://github.com/getgrav/grav-plugin-shortcode-core).
 
-Development of this version of Adsense is inspirated from [Adsense Grav plugin](https://github.com/muuvmuuv/grav-plugin-adsense) of Muuvmuuv.
+Development of this version of Adsense plugin is inspirated from [Adsense Grav plugin](https://github.com/muuvmuuv/grav-plugin-adsense) of [Marvin Heilemann](https://github.com/muuvmuuv/).
 
-## Installation and Updates
+## Installation
 
-Installing or updating the `Adsense 2` plugin can be done in manual installation  by downloading this plugin and extracting all plugin files to
+Installing the `Adsense 2` plugin can be done only in manual installation mode by downloading this one and extracting all files to
 
     user/plugins/adsense2
 
@@ -79,7 +79,7 @@ There are many ways to use `Adsense 2` plugin.
 
 ### By Shortcode
 
-Using Shortcode allow user to integrate Adsense bloc in page content. There are 2 ways by using Shortcode:
+Using Shortcode allow user to integrate Adsense bloc in page content. There are 2 ways:
 
 - Using unique ID
 
@@ -87,7 +87,7 @@ Using Shortcode allow user to integrate Adsense bloc in page content. There are 
 [adsense adid="my-id"][/adsense]
 ```
 
-It look for the adsense bloc with unique ID  `adid` in the configuration list and show the Ad.
+It look for the adsense bloc with unique ID  `adid` in the configuration list `page_ads` and display the Ad.
 
 - Using specific Adsense informations
 
@@ -103,7 +103,7 @@ It display the Ad with the tag informations.
 
 ### By modular integration
 
-Using modular integration, user have possibility to add default ad in the theme of **Grav** website. User have possibility to choose among 3 kinds of Ad:
+Using modular integration allow user to add default Ad in theming of **Grav** website. User have possibility to choose among 3 kinds of Ad:
 
 - The Horizontal Ad
 
@@ -113,6 +113,9 @@ This way display an Ad in horizontal format by adding the following lines in you
 {% include 'partials/adsense-horizontal.html.twig' %}
 ```
 
+Render demo:  
+![Grav adsense Plugin in Horizontal](assets/img/sandy_horizontal.png)
+
 - The Vertical Ad
 
 This way display an Ad in vertical format by adding the following lines in your theme skeleton:
@@ -121,6 +124,8 @@ This way display an Ad in vertical format by adding the following lines in your 
 {% include 'partials/adsense-vertical.html.twig' %}
 ```
 
+Render demo:  
+![Grav adsense Plugin in Vertical](assets/img/sandy_vertical.png)
 
 - The Square Ad
 
@@ -129,6 +134,9 @@ This way display an Ad in square format by adding the following lines in your th
 ```twig
 {% include 'partials/adsense-square.html.twig' %}
 ```
+
+Render demo:  
+![Grav adsense Plugin in Square](assets/img/sandy_square.png)
 
 ## Contributing
 
