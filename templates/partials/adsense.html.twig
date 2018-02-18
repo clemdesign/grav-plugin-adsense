@@ -1,0 +1,38 @@
+
+<div id="ad-{{ adsense_hash|default('#') }}" class="adsense {{ adsense_class }} adsense-position-{{ adsense_position }}">
+
+  {# Async Mode #}
+  {% if adsense_type == "async" %}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins  class="adsbygoogle"
+          style="display:inline-block;width:{{ adsense_width }}px;height:{{ adsense_height }}px"
+          data-ad-client="{{ adsense_client }}"
+          data-ad-slot="{{ adsense_slot }}"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    {# Sync Mode #}
+  {% elseif adsense_type == "sync" %}
+    <script type="text/javascript">
+      google_ad_client = "{{ adsense_client }}";
+      google_ad_slot = "{{ adsense_slot }}";
+      google_ad_width = {{ adsense_width }};
+      google_ad_height = {{ adsense_height }};
+    </script>
+    <script type="text/javascript"
+            src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+
+    {# Sandy Mode #}
+  {% elseif adsense_type == "sandy" %}
+  <img
+    src="{{ base_url ~ '/user/plugins/adsense/assets/img/sandy_'~adsense_format~'.png' }}"
+    style="display:inline-block;width:{{ adsense_width }}px;height:{{ adsense_height }}px"
+    alt="Sandy Ad"
+    title="Sandy Ad"
+    class="sandy" />
+
+  {% endif %}
+
+</div>

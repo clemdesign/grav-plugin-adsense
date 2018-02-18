@@ -1,0 +1,11 @@
+
+{# Set Vertical default variables to common variables #}
+{% set adsense_client   = adsense_default_vertical_client %}
+{% set adsense_slot     = adsense_default_vertical_slot %}
+{% set adsense_height   = adsense_default_vertical_height %}
+{% set adsense_width    = adsense_default_vertical_width %}
+{% set adsense_format   = "vertical" %}
+
+{% if adsense_client %}
+  {% include 'partials/adsense.html.twig' %}
+{% endif %}

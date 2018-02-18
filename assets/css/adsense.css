@@ -1,0 +1,13 @@
+.adsense {
+  overflow: hidden;
+}
+
+.adsense-position-left {
+  text-align: left;
+}
+.adsense-position-center {
+  text-align: center;
+}
+.adsense-position-right {
+   text-align: right;
+}

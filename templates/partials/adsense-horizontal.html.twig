@@ -1,0 +1,11 @@
+
+{# Set Horizontal default variables to common variables #}
+{% set adsense_client   = adsense_default_horizontal_client %}
+{% set adsense_slot     = adsense_default_horizontal_slot %}
+{% set adsense_height   = adsense_default_horizontal_height %}
+{% set adsense_width    = adsense_default_horizontal_width %}
+{% set adsense_format   = "horizontal" %}
+
+{% if adsense_client %}
+  {% include 'partials/adsense.html.twig' %}
+{% endif %}
