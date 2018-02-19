@@ -7,7 +7,7 @@ sandbox: false            # Enables a demo mode for local purpose
 
 adsense:
   options:
-    type: "async"        # Code integration mode (either "async" or "sync")
+    mode: "async"        # Code integration mode (either "async" or "sync")
     position: "center"   # Ad position in page (either "center", "left" or "right")
 
   page_ads:              # Ad blocs for page content
@@ -15,6 +15,7 @@ adsense:
       id: unique-id                         # Unique Id for the Ad
       client: ca-pub-0000000000000000       # AdSense client
       slot: 0000000000                      # AdSense slot
+      type: inarticle                       # Adsense type (either "inarticle" or "normal")
       width: 468                            # Adsense width
       height: 60                            # Adsense height
 

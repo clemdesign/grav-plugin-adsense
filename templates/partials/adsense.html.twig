@@ -2,10 +2,16 @@
 <div id="ad-{{ adsense_hash|default('#') }}" class="adsense {{ adsense_class }} adsense-position-{{ adsense_position }}">
 
   {# Async Mode #}
-  {% if adsense_type == "async" %}
+  {% if adsense_mode == "async" %}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins  class="adsbygoogle"
+      {% if adsense_type == "inarticle" %}
+          style="display:block; text-align:center;"
+          data-ad-layout="in-article"
+          data-ad-format="fluid"
+      {% else %}
           style="display:inline-block;width:{{ adsense_width }}px;height:{{ adsense_height }}px"
+      {% endif %}
           data-ad-client="{{ adsense_client }}"
           data-ad-slot="{{ adsense_slot }}"></ins>
     <script>
@@ -13,7 +19,7 @@
     </script>
 
     {# Sync Mode #}
-  {% elseif adsense_type == "sync" %}
+  {% elseif adsense_mode == "sync" %}
     <script type="text/javascript">
       google_ad_client = "{{ adsense_client }}";
       google_ad_slot = "{{ adsense_slot }}";
@@ -25,7 +31,7 @@
     </script>
 
     {# Sandy Mode #}
-  {% elseif adsense_type == "sandy" %}
+  {% elseif adsense_mode == "sandy" %}
   <img
     src="{{ base_url ~ '/user/plugins/adsense/assets/img/sandy_'~adsense_format~'.png' }}"
     style="display:inline-block;width:{{ adsense_width }}px;height:{{ adsense_height }}px"

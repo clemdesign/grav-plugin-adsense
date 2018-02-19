@@ -58,15 +58,15 @@ form:
           title:                        PLUGIN_ADSENSE2.OPTIONS_LABEL
 
           fields:
-            adsense.options.type:
+            adsense.options.mode:
               type:                     select
               size:                     large
-              label:                    PLUGIN_ADSENSE2.OPTIONS.TYPE.LABEL
-              help:                     PLUGIN_ADSENSE2.OPTIONS.TYPE.HELP
+              label:                    PLUGIN_ADSENSE2.OPTIONS.MODE.LABEL
+              help:                     PLUGIN_ADSENSE2.OPTIONS.MODE.HELP
               default:                  async
               options:
-                async:                  PLUGIN_ADSENSE2.OPTIONS.TYPE.ASYNC
-                sync:                   PLUGIN_ADSENSE2.OPTIONS.TYPE.SYNC
+                async:                  PLUGIN_ADSENSE2.OPTIONS.MODE.ASYNC
+                sync:                   PLUGIN_ADSENSE2.OPTIONS.MODE.SYNC
 
             adsense.options.position:
               type:                     select
@@ -242,6 +242,16 @@ form:
                   placeholder:          PLUGIN_ADSENSE2.DATA.SLOT_PH
                   validate:
                     type:               int
+
+                .type:
+                  type:                     select
+                  size:                     large
+                  label:                    PLUGIN_ADSENSE2.DATA.TYPE.LABEL
+                  help:                     PLUGIN_ADSENSE2.DATA.TYPE.HELP
+                  default:                  inarticle
+                  options:
+                    inarticle:              PLUGIN_ADSENSE2.DATA.TYPE.IN_ARTICLE
+                    normal:                 PLUGIN_ADSENSE2.DATA.TYPE.NORMAL
 
                 .width:
                   type:                 text

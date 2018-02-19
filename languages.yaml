@@ -9,7 +9,7 @@ en:
 
     OPTIONS_LABEL: "Options"
     OPTIONS:
-      TYPE:
+      MODE:
         LABEL: "Code integration"
         ASYNC: "Asynchrone"
         SYNC: "Synchrone"
@@ -42,3 +42,9 @@ en:
       WIDTH_PH: "In pixels (Ex: 780)"
       HEIGHT: "Height"
       HEIGHT_PH: "In pixels (Ex: 90)"
+      TYPE:
+        LABEL: "Adsense type"
+        HELP: "Type of Ad to display. Refer to Adsense documentation."
+        IN_ARTICLE: "InArticle Ad"
+        NORMAL: "Normal Ad (Width and Height required)"
+

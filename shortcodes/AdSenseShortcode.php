@@ -11,13 +11,14 @@ class AdSenseShortcode extends Shortcode
     $this->shortcode->getHandlers()->add('adsense', function (ShortcodeInterface $sc) {
 
       $hash   = $this->shortcode->getId($sc);
-      $adid   = $sc->getParameter("adid");
+      $adid   = $sc->getParameter("id");
 
       $class  = $sc->getParameter('class');
 
       /* Ad defined by user by integration code */
       $client = $sc->getParameter('client');
       $slot   = $sc->getParameter('slot');
+      $type   = $sc->getParameter('type');
       $width  = intval($sc->getParameter('width'));
       $height = intval($sc->getParameter('height'));
 
@@ -27,12 +28,13 @@ class AdSenseShortcode extends Shortcode
 
         $output = $this->twig->processTemplate('partials/adsense.html.twig', array(
           'adsense_hash'    => $hash,
-          'adsense_type'    => $this->twig->twig_vars['adsense_type'],
+          'adsense_mode'    => $this->twig->twig_vars['adsense_mode'],
           'adsense_position'=> $this->twig->twig_vars['adsense_position'],
           'adsense_client'  => $params["client"],
           'adsense_slot'    => $params["slot"],
           'adsense_height'  => $params["height"],
           'adsense_width'   => $params["width"],
+          'adsense_type'    => $params["type"],
           'adsense_format'  => $this->getFormat($params["width"], $params["height"]),
           'adsense_class'   => $class,
         ));
@@ -42,16 +44,17 @@ class AdSenseShortcode extends Shortcode
         /** Load an Ad defined by user through integration shortcode */
       } elseif(isset($client) && strlen($client)>3 &&
                 isset($slot) && intval($slot)>0 &&
-                $height>0 && $width>0){
+                (($height>0 && $width>0) || (isset($type) && ($type == "inarticle" || $type == "normal")))){
 
         $output = $this->twig->processTemplate('partials/adsense.html.twig', array(
           'adsense_hash'    => $hash,
-          'adsense_type'    => $this->twig->twig_vars['adsense_type'],
+          'adsense_mode'    => $this->twig->twig_vars['adsense_mode'],
           'adsense_position'=> $this->twig->twig_vars['adsense_position'],
           'adsense_client'  => $client,
           'adsense_slot'    => $slot,
           'adsense_height'  => $height,
           'adsense_width'   => $width,
+          'adsense_type'    => $type,
           'adsense_format'  => $this->getFormat($width , $height),
           'adsense_class'   => $class,
         ));

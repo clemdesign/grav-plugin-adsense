@@ -24,6 +24,10 @@ For page content, plugin allow user to define a list of Adsense blocs and integr
 
 Development of this version of Adsense plugin is inspirated from [Adsense Grav plugin](https://github.com/muuvmuuv/grav-plugin-adsense) of [Marvin Heilemann](https://github.com/muuvmuuv/).
 
+The following kinds of Adsense are compatible:
+- Graphic and Text Ad
+- InArticle Ad
+
 ## Installation
 
 Installing the `Adsense 2` plugin can be done only in manual installation mode by downloading this one and extracting all files to
@@ -44,7 +48,7 @@ sandbox: false            # Enables a demo mode for local purpose
 
 adsense:
   options:
-    type: "async"        # Code integration mode (either "async" or "sync")
+    mode: "async"        # Code integration mode (either "async" or "sync")
     position: "center"   # Ad position in page (either "center", "left" or "right")
 
   page_ads:              # Ad blocs for page content
@@ -52,6 +56,7 @@ adsense:
       id: unique-id                         # Unique Id for the Ad
       client: ca-pub-0000000000000000       # AdSense client
       slot: 0000000000                      # AdSense slot
+      type: inarticle                       # Adsense type (either "inarticle" or "normal")
       width: 468                            # Adsense width
       height: 60                            # Adsense height
 
@@ -84,10 +89,10 @@ Using Shortcode allow user to integrate Adsense bloc in page content. There are 
 - Using unique ID
 
 ```md
-[adsense adid="my-id"][/adsense]
+[adsense id="my-id"][/adsense]
 ```
 
-It look for the adsense bloc with unique ID  `adid` in the configuration list `page_ads` and display the Ad.
+It look for the adsense bloc with unique ID  `id` in the configuration list `page_ads` and display the Ad.
 
 - Using specific Adsense informations
 

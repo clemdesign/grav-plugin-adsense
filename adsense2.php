@@ -38,7 +38,7 @@ class AdSense2Plugin extends Plugin
   public static function getSubscribedEvents()
   {
     return [
-      'onPluginsInitialized' => ['onPluginsInitialized', 0],
+      'onPluginsInitialized' => ['onPluginsInitialized', 1],
     ];
   }
 
@@ -100,6 +100,7 @@ class AdSense2Plugin extends Plugin
 
           $ad[$value["id"]]["client"] = $value["client"];
           $ad[$value["id"]]["slot"]   = $value["slot"];
+          $ad[$value["id"]]["type"]   = $value["type"];
           $ad[$value["id"]]["height"] = isset($value["height"]) ? intval($value["height"]): 90;
           $ad[$value["id"]]["width"]  = isset($value["width"]) ? intval($value["width"]): 728;
         }
@@ -157,11 +158,11 @@ class AdSense2Plugin extends Plugin
     }
 
 
-    //Type
+    //Mode
     if($this->config->get('plugins.adsense2.sandbox')) {
-      $twig->twig_vars['adsense_type'] = "sandy";
+      $twig->twig_vars['adsense_mode'] = "sandy";
     } else {
-      $twig->twig_vars['adsense_type'] = isset($ads_config["options"]["type"]) ? $ads_config["options"]["type"]: "async";
+      $twig->twig_vars['adsense_mode'] = isset($ads_config["options"]["mode"]) ? $ads_config["options"]["mode"]: "async";
     }
 
 
