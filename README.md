@@ -97,10 +97,15 @@ It look for the adsense bloc with unique ID  `id` in the configuration list `pag
 - Using specific Adsense informations
 
 ```md
-[adsense client="adsense-client" slot="adsense-slot" width="adsense-width" height="adsense-height"][/adsense]
+[adsense client="adsense-client" slot="adsense-slot" width="adsense-width" height="adsense-height" type="adsense-type"][/adsense]
 ```
 
-It display the Ad with the tag informations. 
+It display the Ad with the tag informations.  
+`type` can be :
+- `inarticle` for InArticle Ad
+- `normal` or _without value_ for Graphic and Text Ad
+
+In case of  InArticle Ad, `width` and `height` is **not** mandatory.
 
 > "Unique ID" have priority on "specific Adsense informations".
 
