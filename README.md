@@ -43,6 +43,8 @@ Configuration can be done by the **Admin Panel** or by the configuration file `a
 
 enabled: true             # Set to false to disable this plugin completely
 sandbox: false            # Enables a demo mode for local purpose
+built_in_css: true        # Use the default plugin CSS
+add_editor_button: true   # Add an Adsense button to Admin panel in order to add Adsense tag template
 
 # Default configurations for AdSense
 

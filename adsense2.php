@@ -48,8 +48,9 @@ class AdSense2Plugin extends Plugin
   public function onPluginsInitialized()
   {
     if ($this->isAdmin()) {
-      $this->active = false;
-
+      $this->enable([
+        'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
+      ]);
       return;
     }
 
@@ -173,8 +174,14 @@ class AdSense2Plugin extends Plugin
    */
   public function onTwigSiteVariables()
   {
-    /* adding the style to the assets */
-    $this->grav['assets']->addCss('plugin://adsense2/assets/css/adsense.css');
+    if (!$this->isAdmin() && $this->config->get('plugins.adsense2.built_in_css')) {
+      /* adding the style to the assets */
+      $this->grav['assets']->addCss('plugin://adsense2/assets/css/adsense.css');
+    }
+
+    if ($this->isAdmin() && $this->config->get('plugins.adsense2.add_editor_button')) {
+      $this->grav['assets']->add('plugin://adsense2/admin/editor-button/js/button.js');
+    }
   }
 
   /**

@@ -6,6 +6,10 @@ en:
     SANDBOX_STATUS: "Sandbox"
     SANDBOX_HELP: "Sandbox shows you demo ads for testing purposes"
     PLUGIN_STATUS: "Plugin Status"
+    BUILT_IN_CSS_LABEL: "Use built in CSS"
+    ADD_EDITOR_BUTTON:
+      LABEL: "Add editor button"
+      HELP: "The editor button allows you to easily enter Adsense tag in the page content"
 
     OPTIONS_LABEL: "Options"
     OPTIONS:
