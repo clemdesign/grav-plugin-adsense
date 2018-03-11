@@ -1,4 +1,15 @@
 
+# v1.0.1
+
+## 03/11/2018
+
+1.  [](#bugfix)
+-   Fix issue for sandbox renderer
+
+1.  [](#improved)
+-   Update README to add GPM installation
+-   Update README to add Modular page - Fixed configuration method
+
 # v1.0.0
 
 ## 02/18/2018
