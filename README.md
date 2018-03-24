@@ -25,8 +25,9 @@ For page content, plugin allow user to define a list of Adsense blocs and integr
 Development of this version of Adsense plugin is inspirated from [Adsense Grav plugin](https://github.com/muuvmuuv/grav-plugin-adsense) of [Marvin Heilemann](https://github.com/muuvmuuv/).
 
 The following kinds of Adsense are compatible:
-- Graphic and Text Ad
-- InArticle Ad
+- [Graphic and Text Ads](https://support.google.com/adsense/answer/185666?hl=en)
+- [InArticle Ads](https://adsense.googleblog.com/2017/07/introducing-adsense-native-ads.html)
+- [Auto Ads](https://adsense.googleblog.com/2018/02/introducing-adsense-auto-ads.html)
 
 ## Installation
 
@@ -38,7 +39,7 @@ The simplest way to install this plugin is via the [Grav Package Manager (GPM](h
 
     $ bin/gpm install adsense2
 
-This will install the `Adsense 2` plugin into your /user/plugins directory within Grav. Its files can be found under `user/plugins/àdsense2`.
+This will install the `Adsense 2` plugin into your /user/plugins directory within Grav. Its files can be found under `user/plugins/adsense2`.
 
 ### Manual Installation (Download)
 
@@ -57,6 +58,7 @@ enabled: true             # Set to false to disable this plugin completely
 sandbox: false            # Enables a demo mode for local purpose
 built_in_css: true        # Use the default plugin CSS
 add_editor_button: true   # Add an Adsense button to Admin panel in order to add Adsense tag template
+use_auto_ads: false       # Use Auto Ads in page (new feature of Google Adsense)
 
 # Default configurations for AdSense
 
@@ -64,11 +66,12 @@ adsense:
   options:
     mode: "async"        # Code integration mode (either "async" or "sync")
     position: "center"   # Ad position in page (either "center", "left" or "right")
+    auto_ads_client: ""     # Auto Ads client ID (like ca-pub-0000000000000000)
 
   page_ads:              # Ad blocs for page content
     -                    # List of ad blocs
       id: unique-id                         # Unique Id for the Ad
-      client: ca-pub-0000000000000000       # AdSense client
+      client: ""                            # AdSense client (like ca-pub-0000000000000000)
       slot: 0000000000                      # AdSense slot
       type: inarticle                       # Adsense type (either "inarticle" or "normal")
       width: 468                            # Adsense width
@@ -76,17 +79,17 @@ adsense:
 
   modular_ads:          # Ad blocs for modular page (as default)
     horizontal:         # For Horizontal Ad
-      client: ca-pub-0000000000000000       # AdSense client
+      client: ""                            # AdSense client (like ca-pub-0000000000000000)
       slot: 0000000000                      # AdSense slot
       width: 728                            # Adsense width
       height: 90                            # Adsense height
     vertical:         # For Vertical Ad
-      client: ca-pub-0000000000000000       # AdSense client
+      client: ""                            # AdSense client (like ca-pub-0000000000000000)
       slot: 0000000000                      # AdSense slot
       width: 200                            # Adsense width
       height: 600                           # Adsense height
     square:         # For Square Ad
-      client: ca-pub-0000000000000000       # AdSense client
+      client: ""                            # AdSense client (like ca-pub-0000000000000000)
       slot: 0000000000                      # AdSense slot
       width: 300                            # Adsense width
       height: 300                           # Adsense height
@@ -95,6 +98,14 @@ adsense:
 ## Usage
 
 There are many ways to use `Adsense 2` plugin.
+
+### Auto Ads
+
+_Auto Ads_ is a new feature of *Google Adsense*. More informations are available here:
+
+[https://adsense.googleblog.com/2018/02/introducing-adsense-auto-ads.html](https://adsense.googleblog.com/2018/02/introducing-adsense-auto-ads.html)
+
+To use _Auto Ads_ in `Adsense 2` plugin, you just configure `use_auto_ads` to *true* and `adsense.options.auto_ads_client` to your *Auto Ads client ID*.
 
 ### By Shortcode
 

@@ -4,18 +4,20 @@ enabled: true             # Set to false to disable this plugin completely
 sandbox: false            # Enables a demo mode for local purpose
 built_in_css: true        # Use the default plugin CSS
 add_editor_button: true   # Add an Adsense button to Admin panel in order to add Adsense tag template
+use_auto_ads: false       # Use Auto Ads in page (new feature of Google Adsense)
 
 # Default configurations for AdSense
 
 adsense:
   options:
-    mode: "async"        # Code integration mode (either "async" or "sync")
-    position: "center"   # Ad position in page (either "center", "left" or "right")
+    mode: "async"           # Code integration mode (either "async" or "sync")
+    position: "center"      # Ad position in page (either "center", "left" or "right")
+    auto_ads_client: ""     # Auto Ads client ID (like ca-pub-0000000000000000)
 
   page_ads:              # Ad blocs for page content
     -                    # List of ad blocs
       id: unique-id                         # Unique Id for the Ad
-      client: ca-pub-0000000000000000       # AdSense client
+      client: ""                            # AdSense client (like ca-pub-0000000000000000)
       slot: 0000000000                      # AdSense slot
       type: inarticle                       # Adsense type (either "inarticle" or "normal")
       width: 468                            # Adsense width
@@ -23,17 +25,17 @@ adsense:
 
   modular_ads:          # Ad blocs for modular page (as default)
     horizontal:         # For Horizontal Ad
-      client: ca-pub-0000000000000000       # AdSense client
+      client: ""                            # AdSense client (like ca-pub-0000000000000000)
       slot: 0000000000                      # AdSense slot
       width: 728                            # Adsense width
       height: 90                            # Adsense height
     vertical:         # For Vertical Ad
-      client: ca-pub-0000000000000000       # AdSense client
+      client: ""                            # AdSense client (like ca-pub-0000000000000000)
       slot: 0000000000                      # AdSense slot
       width: 200                            # Adsense width
       height: 600                           # Adsense height
     square:         # For Square Ad
-      client: ca-pub-0000000000000000       # AdSense client
+      client: ""                            # AdSense client (like ca-pub-0000000000000000)
       slot: 0000000000                      # AdSense slot
       width: 300                            # Adsense width
       height: 300                           # Adsense height

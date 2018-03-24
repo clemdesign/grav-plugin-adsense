@@ -1,4 +1,11 @@
 
+# v1.1.0
+
+## 03/24/2018
+
+1.  [](#improved)
+-   Integrate Auto Ads (new feature of Adsense)
+
 # v1.0.1
 
 ## 03/11/2018

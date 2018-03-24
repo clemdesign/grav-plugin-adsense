@@ -1,5 +1,5 @@
 name:                                   "AdSense 2"
-version:                                1.0.1
+version:                                1.1.0
 description:                            "This plugin enables to use AdSense inside a page content or modular page to be rendered by Grav."
 icon:                                   adn
 author:
@@ -51,8 +51,8 @@ form:
           highlight: 1
           default: 1
           options:
-            1: Enabled
-            0: Disabled
+            1:                          PLUGIN_ADMIN.ENABLED
+            0:                          PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
 
@@ -63,8 +63,20 @@ form:
           highlight: 1
           default: 1
           options:
-            1: Enabled
-            0: Disabled
+            1:                          PLUGIN_ADMIN.ENABLED
+            0:                          PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        use_auto_ads:
+          type: toggle
+          label:                        PLUGIN_ADSENSE2.AUTO_ADS.LABEL
+          help:                         PLUGIN_ADSENSE2.AUTO_ADS.HELP
+          highlight: 1
+          default: 0
+          options:
+            1:                          PLUGIN_ADMIN.ENABLED
+            0:                          PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
 
@@ -100,6 +112,14 @@ form:
                 center:                 PLUGIN_ADSENSE2.OPTIONS.POSITION.CENTER
                 right:                  PLUGIN_ADSENSE2.OPTIONS.POSITION.RIGHT
                 left:                   PLUGIN_ADSENSE2.OPTIONS.POSITION.LEFT
+              validate:
+                type:                   string
+
+            adsense.options.auto_ads_client:
+              type:                     text
+              size:                     large
+              label:                    PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_CLIENT.LABEL
+              placeholder:              PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_CLIENT.PH
               validate:
                 type:                   string
 

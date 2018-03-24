@@ -10,6 +10,9 @@ en:
     ADD_EDITOR_BUTTON:
       LABEL: "Add editor button"
       HELP: "The editor button allows you to easily enter Adsense tag in the page content"
+    AUTO_ADS:
+      LABEL:  "Use Auto Ads"
+      HELP: "Integrate Auto Ads in your page using machine learning to place Adsense bloc in free position."
 
     OPTIONS_LABEL: "Options"
     OPTIONS:
@@ -23,6 +26,9 @@ en:
         CENTER: "Center"
         LEFT: "Left"
         RIGHT: "Right"
+      AUTO_ADS_CLIENT:
+        LABEL:  "Auto Ads client ID"
+        PH: "ca-pub-0000000000000000"
 
     MODULAR_ADS:
       LABEL: "Default Modular Ads"

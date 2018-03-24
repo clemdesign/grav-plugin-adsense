@@ -174,11 +174,29 @@ class AdSense2Plugin extends Plugin
    */
   public function onTwigSiteVariables()
   {
+    // Built In CSS
     if (!$this->isAdmin() && $this->config->get('plugins.adsense2.built_in_css')) {
       /* adding the style to the assets */
       $this->grav['assets']->addCss('plugin://adsense2/assets/css/adsense.css');
     }
 
+    //Auto Ads
+    if (!$this->isAdmin() && $this->config->get('plugins.adsense2.use_auto_ads')) {
+      $auto_ads_client = $this->config->get('plugins.adsense2.adsense.options.auto_ads_client');
+
+      if($auto_ads_client){
+        //Load Google Ads in async not in pipeline
+        $this->grav['assets']->addJs('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', 10, false, 'async');
+
+        $this->grav['assets']->addInlineJs('
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "'.$auto_ads_client.'",
+          enable_page_level_ads: true
+     });', 10, false);
+      }
+    }
+
+    // Editor button
     if ($this->isAdmin() && $this->config->get('plugins.adsense2.add_editor_button')) {
       $this->grav['assets']->add('plugin://adsense2/admin/editor-button/js/button.js');
     }
