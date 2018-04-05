@@ -67,7 +67,9 @@ adsense:
     mode: "async"        # Code integration mode (either "async" or "sync")
     position: "center"   # Ad position in page (either "center", "left" or "right")
     auto_ads_client: ""     # Auto Ads client ID (like ca-pub-0000000000000000)
-
+    auto_ads_filter:        # Filter of URN pages used to load Auto Ads. Nothing means All pages (Non filtered)
+      - blog
+      - portfolio
   page_ads:              # Ad blocs for page content
     -                    # List of ad blocs
       id: unique-id                         # Unique Id for the Ad
@@ -106,6 +108,11 @@ _Auto Ads_ is a new feature of *Google Adsense*. More informations are available
 [https://adsense.googleblog.com/2018/02/introducing-adsense-auto-ads.html](https://adsense.googleblog.com/2018/02/introducing-adsense-auto-ads.html)
 
 To use _Auto Ads_ in `Adsense 2` plugin, you just configure `use_auto_ads` to *true* and `adsense.options.auto_ads_client` to your *Auto Ads client ID*.
+
+To add filtered URN items for Auto Ads treatment, please add items in parameter `adsense.options.auto_ads_filter`.  
+When nothing is set, all pages load Auto Ads.  
+When an item is set, URN with this item load Auto Ads.  
+When a filter is set and you want to load Auto Ads for URN `/` ressource, please add the key `home`to filter list.
 
 ### By Shortcode
 

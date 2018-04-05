@@ -1,4 +1,11 @@
 
+# v1.1.1
+
+## 04/05/2018
+
+1.  [](#improved)
+-   Add filter feature for Auto Ads: User have possibility to Apply Auto Ads to filtered URN items.
+
 # v1.1.0
 
 ## 03/24/2018

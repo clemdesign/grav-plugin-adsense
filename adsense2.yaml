@@ -13,6 +13,9 @@ adsense:
     mode: "async"           # Code integration mode (either "async" or "sync")
     position: "center"      # Ad position in page (either "center", "left" or "right")
     auto_ads_client: ""     # Auto Ads client ID (like ca-pub-0000000000000000)
+    auto_ads_filter:        # Filter of URN pages used to load Auto Ads. Nothing means All pages (Non filtered)
+      - blog
+      - portfolio
 
   page_ads:              # Ad blocs for page content
     -                    # List of ad blocs

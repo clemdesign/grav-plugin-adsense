@@ -29,6 +29,10 @@ en:
       AUTO_ADS_CLIENT:
         LABEL:  "Auto Ads client ID"
         PH: "ca-pub-0000000000000000"
+      AUTO_ADS_FILTER:
+        LABEL:  "Apply Auto Ads to"
+        PH: "All pages"
+        HELP: "Filter of URN pages used to load Auto Ads."
 
     MODULAR_ADS:
       LABEL: "Default Modular Ads"

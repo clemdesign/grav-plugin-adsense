@@ -1,5 +1,5 @@
 name:                                   "AdSense 2"
-version:                                1.1.0
+version:                                1.1.1
 description:                            "This plugin enables to use AdSense inside a page content or modular page to be rendered by Grav."
 icon:                                   adn
 author:
@@ -122,6 +122,15 @@ form:
               placeholder:              PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_CLIENT.PH
               validate:
                 type:                   string
+
+            adsense.options.auto_ads_filter:
+              type:                     selectize
+              size:                     large
+              label:                    PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_FILTER.LABEL
+              placeholder:              PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_FILTER.PH
+              help:                     PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_FILTER.HELP
+              validate:
+                type:                   commalist
 
         modular_ads:
           type:                         fieldset

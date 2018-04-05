@@ -185,14 +185,32 @@ class AdSense2Plugin extends Plugin
       $auto_ads_client = $this->config->get('plugins.adsense2.adsense.options.auto_ads_client');
 
       if($auto_ads_client){
-        //Load Google Ads in async not in pipeline
-        $this->grav['assets']->addJs('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', 10, false, 'async');
 
-        $this->grav['assets']->addInlineJs('
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "'.$auto_ads_client.'",
-          enable_page_level_ads: true
-     });', 10, false);
+        //Manage Filter
+        $filter_items = $this->config->get('plugins.adsense2.adsense.options.auto_ads_filter');
+        $url = strtolower($this->cleanUrl($this->grav["uri"]->url()));
+
+        $bDispAutoAds = true;
+        if(is_array($filter_items) && (count($filter_items) > 0)) {
+          if(!empty($url)) {
+            //Look for url in filter list
+            if(!in_array($url, $filter_items)) $bDispAutoAds = false;
+          } else {
+            //Look for home in filter list
+            if(!in_array("home", $filter_items)) $bDispAutoAds = false;
+          }
+        }
+
+        if($bDispAutoAds) {
+          //Load Google Ads in async not in pipeline
+          $this->grav['assets']->addJs('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', 10, false, 'async');
+  
+          $this->grav['assets']->addInlineJs('
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "'.$auto_ads_client.'",
+            enable_page_level_ads: true
+       });', 10, false);
+        }
       }
     }
 
