@@ -1,4 +1,12 @@
 
+# v1.1.2
+
+## 06/11/2018
+
+1.  [](#bugfix)
+-   Fix [Issue #2](https://github.com/clemdesign/grav-plugin-adsense2/issues/2)
+-   Fix issue on sandbox picture path.
+
 # v1.1.1
 
 ## 04/05/2018
