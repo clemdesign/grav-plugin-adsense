@@ -227,4 +227,16 @@ class AdSense2Plugin extends Plugin
   {
       $this->grav['twig']->twig_paths[] = __DIR__.'/templates';
   }
+
+  /**
+   * Clean URL
+   * @param $url
+   * @return bool|string
+   */
+  private function cleanUrl($url) {
+    if(substr($url,0,1) == "/") {
+      return substr($url, 1, strlen($url)-1);
+    }
+    return $url;
+  }
 }
