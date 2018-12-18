@@ -1,4 +1,11 @@
 
+# v1.1.3
+
+## 12/18/2018
+
+1.  [](#improved)
+-   Merge of Pull request [#3](https://github.com/clemdesign/grav-plugin-adsense2/pull/3)
+
 # v1.1.2
 
 ## 06/11/2018
