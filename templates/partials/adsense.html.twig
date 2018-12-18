@@ -32,13 +32,12 @@
 
     {# Sandy Mode #}
   {% elseif adsense_mode == "sandy" %}
-  <img
-    src="{{ base_url_absolute ~ '/user/plugins/adsense2/assets/img/sandy_'~adsense_format~'.png' }}"
-    style="display:inline-block;width:{{ adsense_width }}px;height:{{ adsense_height }}px"
-    alt="Sandy Ad"
-    title="Sandy Ad"
-    class="sandy" />
-
+    <img
+      src="{{ url('plugin://adsense2/assets/img/sandy_'~adsense_format~'.png') }}"
+      style="display:inline-block;width:{{ adsense_width }}px;height:{{ adsense_height }}px"
+      alt="Sandy Ad"
+      title="Sandy Ad"
+      class="sandy" />
   {% endif %}
 
 </div>
