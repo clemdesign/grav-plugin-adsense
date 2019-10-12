@@ -22,7 +22,7 @@ For modular page, plugin allow user to define default `horizontal`, `vertical` o
 
 For page content, plugin allow user to define a list of Adsense blocs and integrate it through [Shortcode](https://github.com/getgrav/grav-plugin-shortcode-core).
 
-Development of this version of Adsense plugin is inspirated from [Adsense Grav plugin](https://github.com/muuvmuuv/grav-plugin-adsense) of [Marvin Heilemann](https://github.com/muuvmuuv/).
+This version is based on the first initialized by Marvin H.
 
 The following kinds of Adsense are compatible:
 - [Graphic and Text Ads](https://support.google.com/adsense/answer/185666?hl=en)
@@ -213,7 +213,7 @@ Thanks!
 
 ## Credits
 
-- [Adsense Grav Plugin](https://github.com/muuvmuuv/grav-plugin-adsense) of [Marvin Heilemann](https://github.com/muuvmuuv/)
+- [Adsense Grav Plugin](https://github.com/muuvmuuv/grav-plugin-adsense) of [Marvin Heilemann](https://github.com/muuvmuuv/): Initialized by Marvin.
 - [Shortcode Core](https://github.com/getgrav/grav-plugin-shortcode-core)
 
 ## License
