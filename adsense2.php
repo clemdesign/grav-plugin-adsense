@@ -209,7 +209,7 @@ class AdSense2Plugin extends Plugin
        (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "'.$auto_ads_client.'",
             enable_page_level_ads: true
-       });', 10, false);
+       });', 10, null);
         }
       }
     }

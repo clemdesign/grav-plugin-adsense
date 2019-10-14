@@ -1,4 +1,13 @@
 
+# v1.1.4
+
+## 10/14/2019
+
+1.  [](#bugfix)
+-   Fix issue [#6](https://github.com/clemdesign/grav-plugin-adsense2/issues/6)
+
+# v1.1.2
+
 # v1.1.3
 
 ## 12/18/2018
