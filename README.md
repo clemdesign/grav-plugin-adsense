@@ -1,6 +1,6 @@
 # [![Grav adsense Plugin](assets/logo.png)][project]
 
-## The **Adsense 2** plugin for [Grav](https://getgrav.org) introduces integration of Adsense blocs for your modular page and your page content.
+## The **Adsense** plugin for [Grav](https://getgrav.org) introduces integration of Adsense blocs for your modular page and your page content.
 
 #### Table of Contents:
 
@@ -14,15 +14,13 @@
 
 ## About
 
-`AdSense 2` is a plugin for [**Grav**](http://getgrav.org) that let you add Adsense blocs to some place in your modular page and/or page content. 
+`AdSense` is a plugin for [**Grav**](http://getgrav.org) that let you add Adsense blocs to some place in your modular page and/or page content. 
 
 ![Screenshot adsense Plugin](assets/screenshot.png "AdSense Preview")
 
 For modular page, plugin allow user to define default `horizontal`, `vertical` or `square` Ad.
 
 For page content, plugin allow user to define a list of Adsense blocs and integrate it through [Shortcode](https://github.com/getgrav/grav-plugin-shortcode-core).
-
-This version is based on the first initialized by Marvin H.
 
 The following kinds of Adsense are compatible:
 - [Graphic and Text Ads](https://support.google.com/adsense/answer/185666?hl=en)
@@ -31,25 +29,25 @@ The following kinds of Adsense are compatible:
 
 ## Installation
 
-Installing the `Adsense 2` plugin can be done in one of two way: GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file or GIT.
+Installing the `Adsense` plugin can be done in one of two way: GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file or GIT.
 
 ### GPM Installation (Preferred)
 
 The simplest way to install this plugin is via the [Grav Package Manager (GPM](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line). From the root of your Grav install type:
 
-    $ bin/gpm install adsense2
+    $ bin/gpm install adsense
 
-This will install the `Adsense 2` plugin into your /user/plugins directory within Grav. Its files can be found under `user/plugins/adsense2`.
+This will install the `Adsense` plugin into your /user/plugins directory within Grav. Its files can be found under `user/plugins/adsense`.
 
 ### Manual Installation (Download)
 
 To install this plugin, just download the zip version of this repository and unzip it under:
 
-    user/plugins/adsense2
+    user/plugins/adsense
 
 ## Configuration
 
-Configuration can be done by the **Admin Panel** or by the configuration file `adsense2.yaml` into your `users/config/plugins/` folder:
+Configuration can be done by the **Admin Panel** or by the configuration file `adsense.yaml` into your `users/config/plugins/` folder:
 
 ```yaml
 # Global plugin configurations
@@ -99,7 +97,7 @@ adsense:
 
 ## Usage
 
-There are many ways to use `Adsense 2` plugin.
+There are many ways to use `Adsense` plugin.
 
 ### Auto Ads
 
@@ -107,7 +105,7 @@ _Auto Ads_ is a new feature of *Google Adsense*. More informations are available
 
 [https://adsense.googleblog.com/2018/02/introducing-adsense-auto-ads.html](https://adsense.googleblog.com/2018/02/introducing-adsense-auto-ads.html)
 
-To use _Auto Ads_ in `Adsense 2` plugin, you just configure `use_auto_ads` to *true* and `adsense.options.auto_ads_client` to your *Auto Ads client ID*.
+To use _Auto Ads_ in `Adsense` plugin, you just configure `use_auto_ads` to *true* and `adsense.options.auto_ads_client` to your *Auto Ads client ID*.
 
 To add filtered URN items for Auto Ads treatment, please add items in parameter `adsense.options.auto_ads_filter`.  
 When nothing is set, all pages load Auto Ads.  
@@ -199,6 +197,10 @@ Modular integration using fixed configuration allow user to add a bloc Ad in tem
 {% include 'partials/adsense.html.twig' %}
 ```
 
+## Migration from 1.x to 2.x
+
+Migration is simple: rename the file `user/config/plugins/adsense2.yaml` to `user/config/plugins/adsense.yaml`, or redo your plugin configuration.
+
 ## Contributing
 
 You can contribute at any time but before opening any issue, please search for existing issues.
@@ -213,12 +215,12 @@ Thanks!
 
 ## Credits
 
-- [Adsense Grav Plugin](https://github.com/muuvmuuv/grav-plugin-adsense) of [Marvin Heilemann](https://github.com/muuvmuuv/): Initialized by Marvin.
+- [Adsense Grav Plugin](https://github.com/muuvmuuv/grav-plugin-adsense) of [Marvin Heilemann](https://github.com/muuvmuuv/): Initialized by Marvin H.
 - [Shortcode Core](https://github.com/getgrav/grav-plugin-shortcode-core)
 
 ## License
 
-Copyright (c) 2018 [clemdesign][github].
+Copyright (c) 2019 [clemdesign][github].
 
 For use under the terms of the [MIT][mit-license] license.
 
@@ -226,6 +228,6 @@ For use under the terms of the [MIT][mit-license] license.
 
 [mit-license]: http://www.opensource.org/licenses/mit-license.php "MIT license"
 
-[project]: https://github.com/clemdesign/grav-plugin-adsense2
+[project]: https://github.com/clemdesign/grav-plugin-adsense
 
-[issues]: https://github.com/clemdesign/grav-plugin-adsense2/issues "GitHub Issues for Grav Adsense 2 Plugin"
+[issues]: https://github.com/clemdesign/grav-plugin-adsense/issues "GitHub Issues for Grav Adsense Plugin"

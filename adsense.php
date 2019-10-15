@@ -28,7 +28,7 @@ use RocketTheme\Toolbox\Event\Event;
  * This plugin enables to use AdSense inside a document
  * to be rendered by Grav.
  */
-class AdSense2Plugin extends Plugin
+class AdSensePlugin extends Plugin
 {
   /**
    * Return a list of subscribed events.
@@ -54,7 +54,7 @@ class AdSense2Plugin extends Plugin
       return;
     }
 
-    if ($this->config->get('plugins.adsense2.enabled')) {
+    if ($this->config->get('plugins.adsense.enabled')) {
       $this->enable([
         'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
         'onPageContentRaw' => ['onPageContentRaw', 0],
@@ -85,10 +85,10 @@ class AdSense2Plugin extends Plugin
     /** @var Twig $twig */
     $twig = $this->grav['twig'];
 
-    $ads_config = $this->config->get("plugins.adsense2.adsense");
+    $ads_config = $this->config->get("plugins.adsense.adsense");
 
     /* Set twig vars */
-    $twig->twig_vars['adsense_sandy']     = $this->config->get('plugins.adsense2.sandbox');
+    $twig->twig_vars['adsense_sandy']     = $this->config->get('plugins.adsense.sandbox');
     $twig->twig_vars['adsense_position']  = isset($ads_config["options"]["position"]) ? $ads_config["options"]["position"]: "center";
 
     // Page ads
@@ -160,7 +160,7 @@ class AdSense2Plugin extends Plugin
 
 
     //Mode
-    if($this->config->get('plugins.adsense2.sandbox')) {
+    if($this->config->get('plugins.adsense.sandbox')) {
       $twig->twig_vars['adsense_mode'] = "sandy";
     } else {
       $twig->twig_vars['adsense_mode'] = isset($ads_config["options"]["mode"]) ? $ads_config["options"]["mode"]: "async";
@@ -175,19 +175,19 @@ class AdSense2Plugin extends Plugin
   public function onTwigSiteVariables()
   {
     // Built In CSS
-    if (!$this->isAdmin() && $this->config->get('plugins.adsense2.built_in_css')) {
+    if (!$this->isAdmin() && $this->config->get('plugins.adsense.built_in_css')) {
       /* adding the style to the assets */
-      $this->grav['assets']->addCss('plugin://adsense2/assets/css/adsense.css');
+      $this->grav['assets']->addCss('plugin://adsense/assets/css/adsense.css');
     }
 
     //Auto Ads
-    if (!$this->isAdmin() && $this->config->get('plugins.adsense2.use_auto_ads')) {
-      $auto_ads_client = $this->config->get('plugins.adsense2.adsense.options.auto_ads_client');
+    if (!$this->isAdmin() && $this->config->get('plugins.adsense.use_auto_ads')) {
+      $auto_ads_client = $this->config->get('plugins.adsense.adsense.options.auto_ads_client');
 
       if($auto_ads_client){
 
         //Manage Filter
-        $filter_items = $this->config->get('plugins.adsense2.adsense.options.auto_ads_filter');
+        $filter_items = $this->config->get('plugins.adsense.adsense.options.auto_ads_filter');
         $url = strtolower($this->cleanUrl($this->grav["uri"]->url()));
 
         $bDispAutoAds = true;
@@ -215,8 +215,8 @@ class AdSense2Plugin extends Plugin
     }
 
     // Editor button
-    if ($this->isAdmin() && $this->config->get('plugins.adsense2.add_editor_button')) {
-      $this->grav['assets']->add('plugin://adsense2/admin/editor-button/js/button.js');
+    if ($this->isAdmin() && $this->config->get('plugins.adsense.add_editor_button')) {
+      $this->grav['assets']->add('plugin://adsense/admin/editor-button/js/button.js');
     }
   }
 

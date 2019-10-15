@@ -3,8 +3,8 @@
         $('body').on('grav-editor-ready', function() {
             var Instance = Grav.default.Forms.Fields.EditorField.Instance;
             Instance.addButton({
-                youtube: {
-                    identifier: 'adsense2',
+                adsense: {
+                    identifier: 'adsense',
                     title: 'Adsense',
                     label: '<i class="fa fa-fw fa-adn"></i>',
                     modes: ['gfm', 'markdown'],

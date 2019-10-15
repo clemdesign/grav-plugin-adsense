@@ -1,10 +1,18 @@
 
+# v2.0.0
+
+## 10/15/2019
+
+1.  [](#improved)
+-   Rename plugin repository `adsense2` to `adsense`.
+
+
 # v1.1.4
 
 ## 10/14/2019
 
 1.  [](#bugfix)
--   Fix issue [#6](https://github.com/clemdesign/grav-plugin-adsense2/issues/6)
+-   Fix issue [#6](https://github.com/clemdesign/grav-plugin-adsense/issues/6)
 
 # v1.1.2
 
@@ -13,14 +21,14 @@
 ## 12/18/2018
 
 1.  [](#improved)
--   Merge of Pull request [#3](https://github.com/clemdesign/grav-plugin-adsense2/pull/3)
+-   Merge of Pull request [#3](https://github.com/clemdesign/grav-plugin-adsense/pull/3)
 
 # v1.1.2
 
 ## 06/11/2018
 
 1.  [](#bugfix)
--   Fix [Issue #2](https://github.com/clemdesign/grav-plugin-adsense2/issues/2)
+-   Fix [Issue #2](https://github.com/clemdesign/grav-plugin-adsense/issues/2)
 -   Fix issue on sandbox picture path.
 
 # v1.1.1

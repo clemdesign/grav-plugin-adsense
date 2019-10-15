@@ -1,6 +1,6 @@
 # English
 en:
-  PLUGIN_ADSENSE2:
+  PLUGIN_ADSENSE:
     GLOBAL_CONFIG: "Global Settings"
     DEFAULT_CONFIG: "Default Configuration for AdSense"
     SANDBOX_STATUS: "Sandbox"

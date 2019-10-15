@@ -1,14 +1,15 @@
-name:                                   "Google AdSense 2"
-version:                                1.1.4
+name:                                   "Google AdSense"
+version:                                2.0.0
 description:                            "This plugin enables to use AdSense inside a page content or modular page to be rendered by Grav."
-icon:                                   adn
+icon:                                   google
 author:
   name:                                 clemdesign
   email:                                contact@clemdesign.fr
-homepage:                               https://github.com/clemdesign/grav-plugin-adsense2
+  url:                                  https://www.clemdesign.fr
+homepage:                               https://github.com/clemdesign/grav-plugin-adsense
 keywords:                               [adsense, grav, extension, plugin, google]
-docs:                                   https://github.com/clemdesign/grav-plugin-adsense2/blob/master/README.md
-bugs:                                   https://github.com/clemdesign/grav-plugin-adsense2/issues
+docs:                                   https://github.com/clemdesign/grav-plugin-adsense/blob/master/README.md
+bugs:                                   https://github.com/clemdesign/grav-plugin-adsense/issues
 license:                                MIT
 
 dependencies:
@@ -19,13 +20,13 @@ form:
   fields:
     global:
       type:                             section
-      title:                            PLUGIN_ADSENSE2.GLOBAL_CONFIG
+      title:                            PLUGIN_ADSENSE.GLOBAL_CONFIG
       underline:                        1
 
       fields:
         enabled:
           type:                         toggle
-          label:                        PLUGIN_ADSENSE2.PLUGIN_STATUS
+          label:                        PLUGIN_ADSENSE.PLUGIN_STATUS
           highlight:                    1
           default:                      0
           options:
@@ -36,7 +37,7 @@ form:
 
         sandbox:
           type:                         toggle
-          label:                        PLUGIN_ADSENSE2.SANDBOX_STATUS
+          label:                        PLUGIN_ADSENSE.SANDBOX_STATUS
           highlight:                    0
           default:                      1
           options:
@@ -47,7 +48,7 @@ form:
 
         built_in_css:
           type: toggle
-          label:                        PLUGIN_ADSENSE2.BUILT_IN_CSS_LABEL
+          label:                        PLUGIN_ADSENSE.BUILT_IN_CSS_LABEL
           highlight: 1
           default: 1
           options:
@@ -58,8 +59,8 @@ form:
 
         add_editor_button:
           type: toggle
-          label:                        PLUGIN_ADSENSE2.ADD_EDITOR_BUTTON.LABEL
-          help:                         PLUGIN_ADSENSE2.ADD_EDITOR_BUTTON.HELP
+          label:                        PLUGIN_ADSENSE.ADD_EDITOR_BUTTON.LABEL
+          help:                         PLUGIN_ADSENSE.ADD_EDITOR_BUTTON.HELP
           highlight: 1
           default: 1
           options:
@@ -70,8 +71,8 @@ form:
 
         use_auto_ads:
           type: toggle
-          label:                        PLUGIN_ADSENSE2.AUTO_ADS.LABEL
-          help:                         PLUGIN_ADSENSE2.AUTO_ADS.HELP
+          label:                        PLUGIN_ADSENSE.AUTO_ADS.LABEL
+          help:                         PLUGIN_ADSENSE.AUTO_ADS.HELP
           highlight: 1
           default: 0
           options:
@@ -82,7 +83,7 @@ form:
 
     default:
       type:                             section
-      title:                            PLUGIN_ADSENSE2.DEFAULT_CONFIG
+      title:                            PLUGIN_ADSENSE.DEFAULT_CONFIG
       underline:                        1
 
       fields:
@@ -90,45 +91,45 @@ form:
           type:                         fieldset
           collapsible:                  false
           icon:                         gear
-          title:                        PLUGIN_ADSENSE2.OPTIONS_LABEL
+          title:                        PLUGIN_ADSENSE.OPTIONS_LABEL
 
           fields:
             adsense.options.mode:
               type:                     select
               size:                     large
-              label:                    PLUGIN_ADSENSE2.OPTIONS.MODE.LABEL
-              help:                     PLUGIN_ADSENSE2.OPTIONS.MODE.HELP
+              label:                    PLUGIN_ADSENSE.OPTIONS.MODE.LABEL
+              help:                     PLUGIN_ADSENSE.OPTIONS.MODE.HELP
               default:                  async
               options:
-                async:                  PLUGIN_ADSENSE2.OPTIONS.MODE.ASYNC
-                sync:                   PLUGIN_ADSENSE2.OPTIONS.MODE.SYNC
+                async:                  PLUGIN_ADSENSE.OPTIONS.MODE.ASYNC
+                sync:                   PLUGIN_ADSENSE.OPTIONS.MODE.SYNC
 
             adsense.options.position:
               type:                     select
               size:                     small
-              label:                    PLUGIN_ADSENSE2.OPTIONS.POSITION.LABEL
+              label:                    PLUGIN_ADSENSE.OPTIONS.POSITION.LABEL
               default:                  css
               options:
-                center:                 PLUGIN_ADSENSE2.OPTIONS.POSITION.CENTER
-                right:                  PLUGIN_ADSENSE2.OPTIONS.POSITION.RIGHT
-                left:                   PLUGIN_ADSENSE2.OPTIONS.POSITION.LEFT
+                center:                 PLUGIN_ADSENSE.OPTIONS.POSITION.CENTER
+                right:                  PLUGIN_ADSENSE.OPTIONS.POSITION.RIGHT
+                left:                   PLUGIN_ADSENSE.OPTIONS.POSITION.LEFT
               validate:
                 type:                   string
 
             adsense.options.auto_ads_client:
               type:                     text
               size:                     large
-              label:                    PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_CLIENT.LABEL
-              placeholder:              PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_CLIENT.PH
+              label:                    PLUGIN_ADSENSE.OPTIONS.AUTO_ADS_CLIENT.LABEL
+              placeholder:              PLUGIN_ADSENSE.OPTIONS.AUTO_ADS_CLIENT.PH
               validate:
                 type:                   string
 
             adsense.options.auto_ads_filter:
               type:                     selectize
               size:                     large
-              label:                    PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_FILTER.LABEL
-              placeholder:              PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_FILTER.PH
-              help:                     PLUGIN_ADSENSE2.OPTIONS.AUTO_ADS_FILTER.HELP
+              label:                    PLUGIN_ADSENSE.OPTIONS.AUTO_ADS_FILTER.LABEL
+              placeholder:              PLUGIN_ADSENSE.OPTIONS.AUTO_ADS_FILTER.PH
+              help:                     PLUGIN_ADSENSE.OPTIONS.AUTO_ADS_FILTER.HELP
               validate:
                 type:                   commalist
 
@@ -137,46 +138,46 @@ form:
           collapsed:                    false
           collapsible:                  true
           icon:                         th-large
-          title:                        PLUGIN_ADSENSE2.MODULAR_ADS.LABEL
-          help:                         PLUGIN_ADSENSE2.MODULAR_ADS.HELP
+          title:                        PLUGIN_ADSENSE.MODULAR_ADS.LABEL
+          help:                         PLUGIN_ADSENSE.MODULAR_ADS.HELP
 
           fields:
             horizontal:
               type:                     fieldset
               collapsible:              true
               icon:                     mars-stroke-h
-              title:                    PLUGIN_ADSENSE2.MODULAR_ADS.HORIZONTAL
+              title:                    PLUGIN_ADSENSE.MODULAR_ADS.HORIZONTAL
 
               fields:
                 adsense.modular_ads.horizontal.client:
                   type:                 text
                   size:                 large
-                  label:                PLUGIN_ADSENSE2.DATA.CLIENT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.CLIENT_PH
+                  label:                PLUGIN_ADSENSE.DATA.CLIENT
+                  placeholder:          PLUGIN_ADSENSE.DATA.CLIENT_PH
                   validate:
                     type:               string
 
                 adsense.modular_ads.horizontal.slot:
                   type:                 text
                   size:                 large
-                  label:                PLUGIN_ADSENSE2.DATA.SLOT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.SLOT_PH
+                  label:                PLUGIN_ADSENSE.DATA.SLOT
+                  placeholder:          PLUGIN_ADSENSE.DATA.SLOT_PH
                   validate:
                     type:               int
 
                 adsense.modular_ads.horizontal.width:
                   type:                 text
                   size:                 small
-                  label:                PLUGIN_ADSENSE2.DATA.WIDTH
-                  placeholder:          PLUGIN_ADSENSE2.DATA.WIDTH_PH
+                  label:                PLUGIN_ADSENSE.DATA.WIDTH
+                  placeholder:          PLUGIN_ADSENSE.DATA.WIDTH_PH
                   validate:
                     type:               int
 
                 adsense.modular_ads.horizontal.height:
                   type:                 text
                   size:                 small
-                  label:                PLUGIN_ADSENSE2.DATA.HEIGHT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.HEIGHT_PH
+                  label:                PLUGIN_ADSENSE.DATA.HEIGHT
+                  placeholder:          PLUGIN_ADSENSE.DATA.HEIGHT_PH
                   validate:
                     type:               int
 
@@ -184,38 +185,38 @@ form:
               type:                     fieldset
               collapsible:              true
               icon:                     mars-stroke-v
-              title:                    PLUGIN_ADSENSE2.MODULAR_ADS.VERTICAL
+              title:                    PLUGIN_ADSENSE.MODULAR_ADS.VERTICAL
 
               fields:
                 adsense.modular_ads.vertical.client:
                   type:                 text
                   size:                 large
-                  label:                PLUGIN_ADSENSE2.DATA.CLIENT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.CLIENT_PH
+                  label:                PLUGIN_ADSENSE.DATA.CLIENT
+                  placeholder:          PLUGIN_ADSENSE.DATA.CLIENT_PH
                   validate:
                     type:               string
 
                 adsense.modular_ads.vertical.slot:
                   type:                 text
                   size:                 large
-                  label:                PLUGIN_ADSENSE2.DATA.SLOT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.SLOT_PH
+                  label:                PLUGIN_ADSENSE.DATA.SLOT
+                  placeholder:          PLUGIN_ADSENSE.DATA.SLOT_PH
                   validate:
                     type:               int
 
                 adsense.modular_ads.vertical.width:
                   type:                 text
                   size:                 small
-                  label:                PLUGIN_ADSENSE2.DATA.WIDTH
-                  placeholder:          PLUGIN_ADSENSE2.DATA.WIDTH_PH
+                  label:                PLUGIN_ADSENSE.DATA.WIDTH
+                  placeholder:          PLUGIN_ADSENSE.DATA.WIDTH_PH
                   validate:
                     type:               int
 
                 adsense.modular_ads.vertical.height:
                   type:                 text
                   size:                 small
-                  label:                PLUGIN_ADSENSE2.DATA.HEIGHT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.HEIGHT_PH
+                  label:                PLUGIN_ADSENSE.DATA.HEIGHT
+                  placeholder:          PLUGIN_ADSENSE.DATA.HEIGHT_PH
                   validate:
                     type:               int
 
@@ -223,45 +224,45 @@ form:
               type:                     fieldset
               collapsible:              true
               icon:                     square-o
-              title:                    PLUGIN_ADSENSE2.MODULAR_ADS.SQUARE
+              title:                    PLUGIN_ADSENSE.MODULAR_ADS.SQUARE
 
               fields:
                 adsense.modular_ads.square.client:
                   type:                 text
                   size:                 large
-                  label:                PLUGIN_ADSENSE2.DATA.CLIENT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.CLIENT_PH
+                  label:                PLUGIN_ADSENSE.DATA.CLIENT
+                  placeholder:          PLUGIN_ADSENSE.DATA.CLIENT_PH
                   validate:
                     type:               string
 
                 adsense.modular_ads.square.slot:
                   type:                 text
                   size:                 large
-                  label:                PLUGIN_ADSENSE2.DATA.SLOT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.SLOT_PH
+                  label:                PLUGIN_ADSENSE.DATA.SLOT
+                  placeholder:          PLUGIN_ADSENSE.DATA.SLOT_PH
                   validate:
                     type:               int
 
                 adsense.modular_ads.square.width:
                   type:                 text
                   size:                 small
-                  label:                PLUGIN_ADSENSE2.DATA.WIDTH
-                  placeholder:          PLUGIN_ADSENSE2.DATA.WIDTH_PH
+                  label:                PLUGIN_ADSENSE.DATA.WIDTH
+                  placeholder:          PLUGIN_ADSENSE.DATA.WIDTH_PH
                   validate:
                     type:               int
 
                 adsense.modular_ads.square.height:
                   type:                 text
                   size:                 small
-                  label:                PLUGIN_ADSENSE2.DATA.HEIGHT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.HEIGHT_PH
+                  label:                PLUGIN_ADSENSE.DATA.HEIGHT
+                  placeholder:          PLUGIN_ADSENSE.DATA.HEIGHT_PH
                   validate:
                     type:               int
 
         page_ads:
           type:                         fieldset
-          title:                        PLUGIN_ADSENSE2.PAGE_ADS.LABEL
-          help:                         PLUGIN_ADSENSE2.PAGE_ADS.HELP
+          title:                        PLUGIN_ADSENSE.PAGE_ADS.LABEL
+          help:                         PLUGIN_ADSENSE.PAGE_ADS.HELP
           collapsed:                    true
           icon:                         list
 
@@ -274,49 +275,49 @@ form:
                 .id:
                   type:                 text
                   size:                 large
-                  label:                PLUGIN_ADSENSE2.DATA.ID
-                  placeholder:          PLUGIN_ADSENSE2.DATA.ID_PH
+                  label:                PLUGIN_ADSENSE.DATA.ID
+                  placeholder:          PLUGIN_ADSENSE.DATA.ID_PH
                   validate:
                     type:               slug
 
                 .client:
                   type:                 text
                   size:                 large
-                  label:                PLUGIN_ADSENSE2.DATA.CLIENT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.CLIENT_PH
+                  label:                PLUGIN_ADSENSE.DATA.CLIENT
+                  placeholder:          PLUGIN_ADSENSE.DATA.CLIENT_PH
                   validate:
                     type:               string
 
                 .slot:
                   type:                 text
                   size:                 large
-                  label:                PLUGIN_ADSENSE2.DATA.SLOT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.SLOT_PH
+                  label:                PLUGIN_ADSENSE.DATA.SLOT
+                  placeholder:          PLUGIN_ADSENSE.DATA.SLOT_PH
                   validate:
                     type:               int
 
                 .type:
                   type:                     select
                   size:                     large
-                  label:                    PLUGIN_ADSENSE2.DATA.TYPE.LABEL
-                  help:                     PLUGIN_ADSENSE2.DATA.TYPE.HELP
+                  label:                    PLUGIN_ADSENSE.DATA.TYPE.LABEL
+                  help:                     PLUGIN_ADSENSE.DATA.TYPE.HELP
                   default:                  inarticle
                   options:
-                    inarticle:              PLUGIN_ADSENSE2.DATA.TYPE.IN_ARTICLE
-                    normal:                 PLUGIN_ADSENSE2.DATA.TYPE.NORMAL
+                    inarticle:              PLUGIN_ADSENSE.DATA.TYPE.IN_ARTICLE
+                    normal:                 PLUGIN_ADSENSE.DATA.TYPE.NORMAL
 
                 .width:
                   type:                 text
                   size:                 small
-                  label:                PLUGIN_ADSENSE2.DATA.WIDTH
-                  placeholder:          PLUGIN_ADSENSE2.DATA.WIDTH_PH
+                  label:                PLUGIN_ADSENSE.DATA.WIDTH
+                  placeholder:          PLUGIN_ADSENSE.DATA.WIDTH_PH
                   validate:
                     type:               int
 
                 .height:
                   type:                 text
                   size:                 small
-                  label:                PLUGIN_ADSENSE2.DATA.HEIGHT
-                  placeholder:          PLUGIN_ADSENSE2.DATA.HEIGHT_PH
+                  label:                PLUGIN_ADSENSE.DATA.HEIGHT
+                  placeholder:          PLUGIN_ADSENSE.DATA.HEIGHT_PH
                   validate:
                     type:               int
